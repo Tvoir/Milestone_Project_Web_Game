@@ -23,19 +23,17 @@ function movingHoop(x, y) {
 
     setInterval(moveHoop, 1)
 
-    function walkEast(time, callback) {
+    async function walkEast(time) {
         direction = 'east'
         element.src = `./assets/hoop.png`
-        setTimeout(() => {
-            stop()
-            callback()
-        }, time)
+        await sleep(time);
     }
     
 
-    function walkWest(time, callback) {
+    async function walkWest(time) {
         direction = 'west'
         element.src = `./assets/hoop.png`
+        await sleep(time);
     }
 
     function stop() {
@@ -46,9 +44,15 @@ function movingHoop(x, y) {
     return {
         element: element,
         walkWest: walkWest,
-        walkNorth: walkNorth,
+        // walkNorth: walkNorth,
         walkEast: walkEast,
-        walkSouth: walkSouth,
+        // walkSouth: walkSouth,
         stop: stop
     }
+}
+
+function sleep(time){
+    return new Promise(resolve => {
+        setTimeout(resolve,time)
+    })
 }

@@ -1,6 +1,6 @@
 // if object is at this cooridinate and this cooridinate then count as a score 
 
-const hoop = movingHoop(50, 300)
+const hoop = movingHoop(150, 350)
 
 // hoop.walkEast(4000, () => {
 //     npc.walkWest(4000)                                                   
@@ -12,8 +12,8 @@ const hoop = movingHoop(50, 300)
 // const hoop = movingHoop(600, 500)
 
 async function moveHoop(){
-    await hoop.walkEast(1200)
-    await hoop.walkWest(2700)
+    await hoop.walkEast(3000)
+    await hoop.walkWest(3000)
     
 }
 moveHoop()
