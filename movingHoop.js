@@ -1,6 +1,6 @@
 function movingHoop(x, y) {
     let element = newImage('assets/hoop.png')
-    element.style.zIndex = 1;
+    element.style.zIndex = -1;
     
     let direction = null;
 

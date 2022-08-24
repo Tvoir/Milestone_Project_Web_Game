@@ -1,6 +1,7 @@
 let shootLength = 450;
 let ballPosition = 0;
 let score = 0;
+document.querySelector("#score-counter"). textContent = score;
 
 // let dim1 = {x: 5, y: 5, w: 50, h: 50}
 // let dim2 = {x:20, y:10, w: 60, h: 40}
@@ -8,15 +9,27 @@ let score = 0;
 // const bBall = attr(dim1);
 // const rim = attr(dim2);
 var ball = document.querySelector('.ball');
+    function ball(x, y, radius){
+        this.x = 500;
+        this.y = 500;
+        this.radius = 150;
+    }
+
+    // class ball {
+    //     constructor(){
+    //         this.x = 10;
+    //         this.y = 50;
+    //         this.width = 100;
+    //         this.height = 100;
+    //     }
+    // }
 var rim = document.getElementsByName('hoop');
-// class ball {
-//     constructor(){
-//         this.x = 10;
-//         this.y = 50;
-//         this.width = 100;
-//         this.height = 100;
-//     }
-// }
+    function rim(x, y, radius){
+        this.x = 10;
+        this.y = 10;
+        this.radius = 300;
+    }
+
 
     window.addEventListener('load' , () => {
         ball.style.position = 'absolute';
@@ -30,13 +43,18 @@ var rim = document.getElementsByName('hoop');
                 let throwInterval = setInterval(() => {
                 if( ballPosition <= shootLength
                     ) { //check for collision here (checks the top position of bball against bottom position of rim/ bottom position of bball to top pos of rim.)
+                        // if (distance < ball.radius + rim.radius)
                         if (ball.x < rim.x + rim.w &&
                             ball.x + ball.w > rim.x &&
                             ball.y < rim.y + rim.h &&
                             ball.h + ball.y > rim.y) {
                                 //collsion detected
                                 console.log("collision detected")
-                                score = 1
+                                score++
+                            }
+                            else {
+                                console.log("You missed!")
+                                score = 0
                             }
                         // detect collision js in google
                     ball.style.bottom = `${ballPosition}px`
