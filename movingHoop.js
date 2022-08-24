@@ -12,7 +12,8 @@ function movingHoop(x, y) {
             x += 1
         }
         element.style.left = x + 'px'
-        element.style.bottom = y + 'px'
+        element.style.right = x + 'px'
+        console.log(element.style.left, "left position")
     }
 
     setInterval(moveHoop, 1)
@@ -21,6 +22,7 @@ function movingHoop(x, y) {
         direction = 'east'
         element.src = `./assets/hoop.png`
         await sleep(time);
+        
     }
     
 
@@ -30,7 +32,7 @@ function movingHoop(x, y) {
         await sleep(time);
     }
 
-
+    
     return {
         element: element,
         walkWest: walkWest,
