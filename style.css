@@ -1,11 +1,15 @@
 h1 {
     text-align: center;
+    color: red;
 }
 
+h2 {
+    color: red;
+}
 body {
-        /* background-image: url("./assets/court.jpg"); */
+        background-image: url("./assets/court.jpg");
         background-repeat: no-repeat;
-        background-position: center;
+        /* background-position: center; */
         background-size: cover;
 }
 

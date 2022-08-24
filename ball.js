@@ -12,24 +12,34 @@ var ball = document.querySelector('.ball');
     function ball(x, y, radius){
         this.x = 500;
         this.y = 500;
-        this.radius = 150;
+        // this.radius = 150;
+        this.height = 50;
+        this.width = 50;
     }
 
-    // class ball {
-    //     constructor(){
-    //         this.x = 10;
-    //         this.y = 50;
-    //         this.width = 100;
-    //         this.height = 100;
-    //     }
-    // }
-var rim = document.getElementsByName('hoop');
+
+var rim = document.getElementsByName('movingHoop');
     function rim(x, y, radius){
         this.x = 10;
         this.y = 10;
-        this.radius = 300;
+        // this.radius = 300;
+        this.height = 40;
+        this.width = 60;
     }
 
+    // ball("EnterFrame", () => {
+    //     const dx = ball.x - hoop.x;
+    //     const dy = ball.y - hoop.y;
+    //     const distance = Math.sqrt(dx * dx + dy * dy);
+
+    //     if (distance < rim.radius + ball.radius) {
+    //         // collision detected!
+    //         this.color = "green";
+    //     } else {
+    //         // no collision
+    //         this.color = "blue";
+    //     }
+    // });
 
     window.addEventListener('load' , () => {
         ball.style.position = 'absolute';
@@ -43,11 +53,11 @@ var rim = document.getElementsByName('hoop');
                 let throwInterval = setInterval(() => {
                 if( ballPosition <= shootLength
                     ) { //check for collision here (checks the top position of bball against bottom position of rim/ bottom position of bball to top pos of rim.)
-                        // if (distance < ball.radius + rim.radius)
+                        //  if (distance < ball.radius + rim.radius)
                         if (ball.x < rim.x + rim.w &&
                             ball.x + ball.w > rim.x &&
                             ball.y < rim.y + rim.h &&
-                            ball.h + ball.y > rim.y) {
+                            ball.h + ball.y > rim.y){
                                 //collsion detected
                                 console.log("collision detected")
                                 score++
