@@ -14,7 +14,7 @@ function movingHoop(x, y) {
         element.style.left = x + 'px'
         element.style.right = x + 'px'
         
-        console.log(element.style.left, "left position")
+        // console.log(element.style.left, "left position")
     }
 
     setInterval(moveHoop, 1)

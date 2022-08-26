@@ -1,4 +1,4 @@
-let shootLength = 350;
+let shootLength = 650;
 let ballPosition = 0;
 let score = 0;
 let playerScore = document.querySelector("#score-counter")
@@ -28,7 +28,7 @@ document.addEventListener('keydown', (e) => {
                             var rimPosition = parseInt(myRim.style.left)
                             var rimRightPosition = parseInt(myRim.style.right)
                             console.log("my rim", myRim.style.left)
-                            if ((rimPosition < 500 && rimPosition > 300) || (rimRightPosition > 500 && rimRightPosition < 600)) {
+                            if ((rimPosition < 700 && rimPosition > 600) || (rimRightPosition > 750 && rimRightPosition < 850)) {
                                 //collsion detected
                                 console.log("my basketball", rimPosition)
                                 console.log("collision detected")
@@ -40,7 +40,7 @@ document.addEventListener('keydown', (e) => {
                                 // myRim.style.left = "150px"
                             }
                             else {
-                                console.log("You missed!")
+                                // console.log("You missed!")
                                 score = 0
                             }
                             // detect collision js in google
@@ -50,7 +50,7 @@ document.addEventListener('keydown', (e) => {
                         else { clearInterval(fallInterval) }
                     }, 15)
                 }
-            }, 20);
+            }, 15);
             // ball.style.bottom = parseInt(ball.style.bottom) + shootLength + 'px';
             break;
     }
