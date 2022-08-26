@@ -32,7 +32,7 @@ document.addEventListener('keydown', (e) => {
                                 //collsion detected
                                 console.log("my basketball", rimPosition)
                                 console.log("collision detected")
-                                score++;
+                                score ++;
                                 playerScore.innerHTML = score;
                                 
                                 // alert('You made it!')
@@ -41,7 +41,7 @@ document.addEventListener('keydown', (e) => {
                             }
                             else {
                                 // console.log("You missed!")
-                                score = 0
+                                score = 0;
                             }
                             // detect collision js in google
                             ballPosition -= 30
