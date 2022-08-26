@@ -34,6 +34,7 @@ document.addEventListener('keydown', (e) => {
                                 console.log("collision detected")
                                 score++;
                                 playerScore.innerHTML = score;
+                                
                                 // alert('You made it!')
                                 ballPosition = 0
                                 // myRim.style.left = "150px"

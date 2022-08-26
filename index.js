@@ -12,3 +12,7 @@ async function moveHoop(){
 moveHoop()
 
 
+// why did you choose this game
+// live demo of how the game works
+// your favorite function 
+// what you learned while doing this project

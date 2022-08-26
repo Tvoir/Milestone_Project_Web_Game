@@ -19,8 +19,12 @@ body {
     /* width: 50%; */
 }
 
-.fix{
+.fix {
     position:fixed;
     bottom:50px;
     left: 46%;
+}
+
+h2 {
+    text-align: center
 }
