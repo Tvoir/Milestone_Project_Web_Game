@@ -1,11 +1,9 @@
-h1 {
+h1, h2, h3{
     text-align: center;
     color: red;
 }
 
-h2 {
-    color: red;
-}
+
 body {
         background-image: url("./assets/court.jpg");
         background-repeat: no-repeat;
@@ -24,11 +22,6 @@ body {
     bottom:50px;
     left: 46%;
 }
-
-h2 {
-    text-align: center
-}
-
 #container{
     width: 100%;
     min-width: 200px;

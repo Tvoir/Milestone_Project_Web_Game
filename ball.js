@@ -3,7 +3,6 @@ let ballPosition = 0;
 let count = 15;
 let score = 0;
 let playerScore = document.querySelector("#score-counter")
-
 window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
     audio.volume = 0.3;
@@ -62,17 +61,7 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
-//game over
-var interval = setInterval(function(){
-    document.getElementById('count').innerHTML=count;
-    count--;
-    if (count === 0){
-      clearInterval(interval);
-      document.getElementById('count').innerHTML='Done';
-      // or...
-      alert("You're out of time!");
-    }
-  }, 1000);
+
        
 //
         //attach a rim div to the basketball hoop using position absolute on css
