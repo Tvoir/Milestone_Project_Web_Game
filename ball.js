@@ -3,6 +3,9 @@ let ballPosition = 0;
 let count = 15;
 let score = 0;
 let playerScore = document.querySelector("#score-counter")
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
 window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
     audio.volume = 0.3;
@@ -39,7 +42,7 @@ document.addEventListener('keydown', (e) => {
                                 console.log("collision detected")
                                 score ++;
                                 playerScore.innerHTML = score;
-                                
+                                drawScore();
                                 // alert('You made it!')
                                 ballPosition = 0
                                 // myRim.style.left = "150px"
@@ -47,6 +50,9 @@ document.addEventListener('keydown', (e) => {
                             else {
                                 // console.log("You missed!")
                                 score = 0;
+                                missedScore();
+
+                                
                             }
                             // detect collision js in google
                             ballPosition -= 30
@@ -59,12 +65,23 @@ document.addEventListener('keydown', (e) => {
             // ball.style.bottom = parseInt(ball.style.bottom) + shootLength + 'px';
             break;
     }
+    
 })
 
+            
+function drawScore() {
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText(`You made it!`, 100, 30);
+  }
+
+function missedScore() {
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText(`Close...`, 450, 30);
+}
 
        
-//
-        //attach a rim div to the basketball hoop using position absolute on css
-        //every frame a basketball moves run a collision detection that calculates 
 
-        //make a function called checkForCollision, call it in the throwInterval
+        // attach a rim div to the basketball hoop using position absolute on css
+        // every frame a basketball moves run a collision detection that calculates
