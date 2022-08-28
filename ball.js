@@ -55,10 +55,7 @@ break;
 }
 
 })
-window.addEventListener('load', () => {
-    ball.style.position = 'absolute';
-    ball.style.bottom = 0;
-});
+
 
 function drawScore() {
     ctx.font = "30px Arial";
