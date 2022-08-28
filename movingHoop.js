@@ -19,7 +19,7 @@ function movingHoop(x, y) {
 
     setInterval(moveHoop, 1)
 
-    async function walkEast(time) {
+    async function moveEast(time) {
         direction = 'east'
         element.src = `./assets/hoop.png`
         await sleep(time);
@@ -27,7 +27,7 @@ function movingHoop(x, y) {
     }
     
 
-    async function walkWest(time) {
+    async function moveWest(time) {
         direction = 'west'
         element.src = `./assets/hoop.png`
         await sleep(time);
@@ -36,8 +36,8 @@ function movingHoop(x, y) {
     
     return {
         element: element,
-        walkWest: walkWest,
-        walkEast: walkEast,
+        moveWest: moveWest,
+        moveEast: moveEast,
     }
 }
 
