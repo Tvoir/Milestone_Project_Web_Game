@@ -25,7 +25,6 @@ function movingHoop(x, y) {
         await sleep(time);
         
     }
-    
 
     async function moveWest(time) {
         direction = 'west'
