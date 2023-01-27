@@ -1,0 +1,52 @@
+@import "utilities";
+@import "config";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1;
+  }
+
+   .ball{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:fixed;
+    bottom:50px;
+    left: 46%;
+    
+  }
+
+  h1, h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  a {
+    color: text-color-picker($primary-color);
+  }
+
+  .page {
+    @include set-bg($primary-color);
+  height: 200px;
+
+
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

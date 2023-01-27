@@ -8,4 +8,5 @@ Seems like these are the two things i need to fix.
 Room for improvement for sure but had a lot of fun.
 
 Researched a lot of information from w3schools and MDN. Some information was from previous assignments from the bootcamp.
+Also had a lot of help from my two professors and fellow classmates in my current class.
 Please let me know if you have any questions!

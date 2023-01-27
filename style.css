@@ -4,11 +4,11 @@ h1, h2, h3{
 }
 
 
-body {
+/* body {
         background-image: url("./assets/court.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-}
+} */
 
 .center {
     display: block;
@@ -22,6 +22,7 @@ body {
     bottom:50px;
     left: 46%;
 }
+
 #container{
     width: 100%;
     min-width: 200px;

@@ -5,27 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shootin' Hoops</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="css/style.css">
 </head>
 
-<div id="container">
-        <body>
-                
-                <!-- //create a title for the game at the top// -->
-                <h1>Make as many as you can before the music ends!</h1>
-                <h2>Score:</h2>
-                <h2 id="score-counter"> 0 </h2>
-                <h3>Shoot using "up arrow key"</h3>
+<header class="page">
+        <!-- //create a title for the game at the top// -->
+        <h1>Make as many as you can before the music ends!</h1>
+        <h2>Score:</h2>
+        <h2 id="score-counter"> 0 </h2>
+        <h3>Shoot using "up arrow key"</h3>
+        <body> 
                 <canvas id="myCanvas" width="800" height="100"></canvas>
                 <audio autoplay="true" src="./assets/38-J-E-N-O-V-A.mp3"></audio>
                 <!-- create an image with a basketball -->
-                <img class="center fix ball" src="./assets/ball.png" alt="Basketball" width="60">
+                <img class="ball" src="./assets/ball.png" alt="Basketball" width="60">
                 
                 <script src="./ball.js"></script>
                 <script src="./newImage.js"></script>
                 <script src="./movingHoop.js"></script>
                 <script src="./index.js"></script>
         </body>
-</div>
+</header>
+
 
 </html>
+
